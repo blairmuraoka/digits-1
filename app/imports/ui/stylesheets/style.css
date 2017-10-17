@@ -1,3 +1,17 @@
 body {
-  padding-top: 61px;  /* Move body of page below navbar. */
+  /*padding-top: 61px;  !* Move body of page below navbar. *!*/
+}
+
+.ui.fluid.image.header-img {
+  height: 200px;
+}
+
+.ui.borderless.inverted.menu.header-menu {
+  margin: 0px;
+  border-radius: 0px;
+  background-color: #3C601A;
+}
+
+#login-buttons a {
+  color: rgba(255, 255, 255, 0.9);
 }
