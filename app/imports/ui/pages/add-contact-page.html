@@ -1,0 +1,35 @@
+<template name="Add_Contact_Page">
+  <div class="ui container" style="margin-top: 15px">
+    <form class="ui form">
+      <h4 class="ui dividing header">Add Contact</h4>
+      <div class="field">
+        <label>Name</label>
+        <div class="two fields">
+          <div class="field">
+            <input name="first" placeholder="First Name" type="text">
+          </div>
+          <div class="field">
+            <input name="last" placeholder="Last Name" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Address</label>
+        <input name="address" placeholder="Street Address" type="text">
+      </div>
+      <div class="field">
+        <label>Telephone/Email</label>
+        <div class="two fields">
+          <div class="field">
+            <input name="phone" placeholder="Telephone #" type="text">
+          </div>
+          <div class="field">
+            <input name="email" placeholder="Email" type="text">
+          </div>
+        </div>
+      </div>
+
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </div>
+</template>
