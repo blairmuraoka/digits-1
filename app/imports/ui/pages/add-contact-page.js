@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import { Tracker } from 'meteor/tracker';
+// import { Tracker } from 'meteor/tracker';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
 import { FlowRouter } from 'meteor/kadira:flow-router';
@@ -22,7 +22,7 @@ Template.Add_Contact_Page.helpers({
   fieldError(fieldName) {
     const invalidKeys = Template.instance().context.invalidKeys();
     const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
-    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);    
+    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
   },
 });
 
@@ -45,7 +45,7 @@ Template.Add_Contact_Page.events({
     // Determine validity.
     instance.context.validate(cleanData);
     if (instance.context.isValid()) {
-      Contacts.insert(newContactData)
+      Contacts.insert(newContactData);
       instance.messageFlags.set(displayErrorMessages, false);
       FlowRouter.go('Home_Page');
     } else {
@@ -53,4 +53,3 @@ Template.Add_Contact_Page.events({
     }
   },
 });
-

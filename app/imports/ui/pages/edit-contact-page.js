@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import { Tracker } from 'meteor/tracker';
+// import { Tracker } from 'meteor/tracker';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
 import { FlowRouter } from 'meteor/kadira:flow-router';
@@ -28,7 +28,7 @@ Template.Edit_Contact_Page.helpers({
   fieldError(fieldName) {
     const invalidKeys = Template.instance().context.invalidKeys();
     const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
-    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);    
+    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
   },
 });
 
